@@ -19,9 +19,9 @@
                     <p class="text-4xl text-center underline font-bold">Budget Tier</p>
                     @foreach ($strains as $strain)
                         @if ($strain->tier == 'budget')
-                            <div class="flex items-center">
+                            <div class="flex items-center justify-between pt-3">
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
+                                <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
                                           <form action="{{ route('strain.destroy', $strain) }}" method="post">
                                     @csrf
@@ -43,9 +43,9 @@
                     <p class="text-4xl text-center underline font-bold">Middle Tier</p>
                     @foreach ($strains as $strain)
                         @if ($strain->tier == 'middle')
-                            <div class="flex">
+                            <div class="flex items-center justify-between pt-3">
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
+                                <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
                                           <form action="{{ route('strain.destroy', $strain) }}" method="post">
                                     @csrf
@@ -66,9 +66,9 @@
                     <p class="text-4xl text-center underline font-bold">Premium Tier</p>
                     @foreach ($strains as $strain)
                         @if ($strain->tier == 'premium')
-                            <div class="flex">
+                            <div class="flex items-center justify-between pt-3">
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
+                                <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
                                           <form action="{{ route('strain.destroy', $strain) }}" method="post">
                                     @csrf
@@ -89,9 +89,9 @@
                     <p class="text-4xl text-center underline font-bold">Ultra Tier</p>
                     @foreach ($strains as $strain)
                         @if ($strain->tier == 'ultra')
-                            <div class="flex">
+                            <div class="flex items-center justify-between pt-3">
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per
+                                <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per
                                     1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
                                           <form action="{{ route('strain.destroy', $strain) }}" method="post">
