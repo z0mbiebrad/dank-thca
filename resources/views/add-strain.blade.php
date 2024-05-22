@@ -20,7 +20,7 @@
 
                         <div class="mb-4">
                             <label for="price" class="block text-gray-700">Price*</label>
-                            <input type="number" step="0.01"
+                            <input type="number" step="5"
                                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="price"
                                 name="price" required>
                         </div>
@@ -72,11 +72,11 @@
                             </div>
                         </div>
 
-                        <div class="mb-4">
+                        {{-- <div class="mb-4">
                             <label for="picture" class="block text-gray-700">Picture*</label>
                             <input type="file" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
                                 id="picture" name="picture" required>
-                        </div>
+                        </div> --}}
 
                         <button type="submit"
                             class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Add

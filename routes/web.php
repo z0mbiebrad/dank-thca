@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StrainController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +14,9 @@ Route::get('/order-now', function () {
 })->name('order');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/add-item', function () { return view('add-item'); })->name('add-item');;
+    Route::get('/add-strain', function () { return view('add-strain'); })->name('add-strain');;
     Route::post('/add-strain', [StrainController::class, 'store'])->name('strain.store');
+    Route::delete('/menu/{strain}', [StrainController::class, 'destroy'])->name('strain.destroy');
 });
 
 require __DIR__.'/auth.php';

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('type');
             $table->string('tier');
-            $table->text('picture');
+            $table->text('picture')->nullable();
             $table->timestamps();
         });
     }

@@ -34,20 +34,20 @@ class StrainController extends Controller
             'price' => 'required|numeric',
             'type' => 'required',
             'tier' => 'required',
-            'picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            // 'picture' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]); 
         
-        $picturePath = $request->file('picture')->store('strains', 'public');
+        // $picturePath = $request->file('picture')->store('strains', 'public');
 
         Strain::create([
             'strain' => $validatedData['strain'],
             'price' => $validatedData['price'],
             'type' => $validatedData['type'],
             'tier' => $validatedData['tier'],
-            'picture' => $picturePath,
+            // 'picture' => $picturePath,
         ]);
 
-        return redirect()->route('add-item')->with('success', 'Strain added successfully!');
+        return redirect()->route('add-strain')->with('success', 'Strain added successfully!');
     }
 
     /**
@@ -77,8 +77,14 @@ class StrainController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Strain $strain)
     {
-        //
+        if ($strain->delete()) {
+            return redirect()->route('menu')->with('success', 'Post deleted successfully.');
+        } else {
+            return redirect()->route('menu')->with('error', 'Failed to delete post.');
+        }
+
+        return redirect()->route('menu')->with('error', 'An error occurred while deleting the post.');
     }
 }

@@ -19,10 +19,16 @@
                     <p class="text-4xl text-center underline font-bold">Budget Tier</p>
                     @foreach ($strains as $strain)
                         @if ($strain->tier == 'budget')
-                            <div class="flex">
+                            <div class="flex items-center">
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
                                 <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
+                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                </form>
+                          
                             </div>
                         @endif
                     @endforeach
@@ -36,14 +42,19 @@
                 <div class="px-6 py-4 text-gray-900 text-xl">
                     <p class="text-4xl text-center underline font-bold">Middle Tier</p>
                     @foreach ($strains as $strain)
-                    @if ($strain->tier == 'middle')
-                        <div class="flex">
-                            {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                            <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
-                                oz ({{ strtoupper($strain->type) }})</p>
-                        </div>
-                    @endif
-                @endforeach
+                        @if ($strain->tier == 'middle')
+                            <div class="flex">
+                                {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
+                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
+                                    oz ({{ strtoupper($strain->type) }})</p>
+                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                </form>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -54,14 +65,19 @@
                 <div class="px-6 py-4 text-gray-900 text-xl">
                     <p class="text-4xl text-center underline font-bold">Premium Tier</p>
                     @foreach ($strains as $strain)
-                    @if ($strain->tier == 'premium')
-                        <div class="flex">
-                            {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                            <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
-                                oz ({{ strtoupper($strain->type) }})</p>
-                        </div>
-                    @endif
-                @endforeach
+                        @if ($strain->tier == 'premium')
+                            <div class="flex">
+                                {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
+                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
+                                    oz ({{ strtoupper($strain->type) }})</p>
+                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                </form>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -75,8 +91,14 @@
                         @if ($strain->tier == 'ultra')
                             <div class="flex">
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
-                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
+                                <p class="text-lg pt-3 font-bold">*{{ $strain->strain }} ${{ $strain->price }} per
+                                    1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
+                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                </form>
                             </div>
                         @endif
                     @endforeach
