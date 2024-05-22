@@ -23,7 +23,7 @@
                     </x-nav-link>
                     @auth
                     <x-nav-link :href="route('add-strain')" :active="request()->routeIs('add-strain')">
-                        {{ __('add-strain') }}
+                        {{ __('Add Strain') }}
                     </x-nav-link>
                     @endauth
                 </div>
