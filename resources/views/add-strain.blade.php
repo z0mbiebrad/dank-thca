@@ -27,7 +27,7 @@
 
                         <div class="mb-4">
                             <label for="type" class="block text-gray-700">Type*</label>
-                            <div class="mt-1">
+                            <div class="mt-1 flex justify-around">
                                 <label class="inline-flex items-center">
                                     <input type="radio" class="form-radio border-gray-300 rounded-md shadow-sm"
                                         name="type" value="s" required>
