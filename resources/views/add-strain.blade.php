@@ -55,17 +55,17 @@
                                     <span class="ml-1 md:ml-2">Budget</span>
                                 </label>
                                 <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio ml-4 border-gray-300 rounded-md shadow-sm"
+                                    <input type="radio" class="form-radio md:ml-4 border-gray-300 rounded-md shadow-sm"
                                         name="tier" value="middle" required>
                                     <span class="ml-1 md:ml-2">Middle</span>
                                 </label>
                                 <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio ml-4 border-gray-300 rounded-md shadow-sm"
+                                    <input type="radio" class="form-radio md:ml-4 border-gray-300 rounded-md shadow-sm"
                                         name="tier" value="premium" required>
                                     <span class="ml-1 md:ml-2">Premium</span>
                                 </label>
                                 <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio ml-4 border-gray-300 rounded-md shadow-sm"
+                                    <input type="radio" class="form-radio md:ml-4 border-gray-300 rounded-md shadow-sm"
                                         name="tier" value="ultra" required>
                                     <span class="ml-1 md:ml-2">Ultra</span>
                                 </label>
