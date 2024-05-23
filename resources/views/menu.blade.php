@@ -23,12 +23,13 @@
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
                                 <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
-                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
-                                </form>
-                          
+                                    @auth
+                                    <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                    </form>
+                                @endauth
                             </div>
                         @endif
                     @endforeach
@@ -47,7 +48,14 @@
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
                                 <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
-                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @auth
+                                    <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                    </form>
+                                @endauth
+                                <form action="{{ route('strain.destroy', $strain) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
@@ -70,7 +78,14 @@
                                 {{-- <img src="{{ asset('storage/' . $strain->picture) }}" alt="" class="h-24"> --}}
                                 <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per 1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
-                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @auth
+                                    <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                    </form>
+                                @endauth
+                                <form action="{{ route('strain.destroy', $strain) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
@@ -94,7 +109,14 @@
                                 <p class="text-lg  font-bold">*{{ $strain->strain }} ${{ $strain->price }} per
                                     1/8th
                                     oz ({{ strtoupper($strain->type) }})</p>
-                                          <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                    @auth
+                                    <form action="{{ route('strain.destroy', $strain) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                                    </form>
+                                @endauth
+                                <form action="{{ route('strain.destroy', $strain) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
